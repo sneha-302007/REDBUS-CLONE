@@ -1,0 +1,71 @@
+.proceedButton {
+  width: 100%;
+  height: 40px;
+  padding: 6px 39px 7px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.1s;
+  border: none;
+  text-align: center;
+  background-color: #d84e55;
+  color: #fff;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.example-container {
+  position: static !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+::ng-deep .mat-drawer-container {
+  position: static !important;
+  background-color: transparent !important;
+  overflow: visible !important;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+::ng-deep .mat-drawer-content {
+  position: static !important;
+  height: auto !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+
+::ng-deep .mat-drawer {
+  position: fixed !important;
+  top: 60px !important;                    /* adjust to your navbar height */
+  right: 0 !important;
+  height: calc(100vh - 60px) !important;   /* full height minus navbar */
+  width: 600px !important;
+  overflow-y: scroll !important;           /* THIS is what scrolls */
+  z-index: 1100 !important;
+}
+
+::ng-deep .mat-drawer-inner-container {
+  height: auto !important;                 /* Let content define height */
+  min-height: 100% !important;
+  overflow-y: visible !important;          /* Don't double-scroll */
+  overflow-x: hidden !important;
+}
+
+::ng-deep .mat-drawer-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}

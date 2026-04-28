@@ -1,0 +1,12 @@
+.SelectBUS_MAINCONTENT{
+   display:flex;
+}
+
+app-left{
+   width:20%;
+}
+
+app-right{
+   width:80%;
+   display:block;
+}

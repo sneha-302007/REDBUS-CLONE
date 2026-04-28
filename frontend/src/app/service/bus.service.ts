@@ -9,11 +9,11 @@ import { Booking } from '../model/booking.model';
   providedIn: 'root'
 })
 export class BusService {
-  private busbookapi: string = url + 'booking/'
-  private apiurl: string = url + 'routes/'
+  private busbookapi: string = url + '/booking'
+  private apiurl: string = url + '/route'
   constructor(private http: HttpClient) { }
   GETBUSDETAILS(depart: string, arrival: string, date: string): Observable<Bus[]> {
-    const url = `${this.apiurl}${depart}/${arrival}/${date}`;
+   const url = `${this.apiurl}/${depart}/${arrival}/${date}`;
     console.log(depart,arrival,date)
     return this.http.get<Bus[]>(url);
   }

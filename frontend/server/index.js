@@ -10,9 +10,9 @@ app.use(cors());
 const customerroutes=require("./routes/customer");
 const routesroute=require("./routes/route");
 const bookingroute=require("./routes/booking")
-app.use(bookingroute)
-app.use(routesroute)
-app.use(customerroutes);
+app.use('/customer', customerroutes);
+app.use('/route', routesroute);
+app.use('/booking', bookingroute);
 
 const DB_URL = 'mongodb+srv://snehakolekar1632_db_user:test@redbus.5hevtbr.mongodb.net/?appName=RedBus';
 
